@@ -2,7 +2,8 @@
 node {
 // ------------------------------------
 // -- ETAPA: Compilar
-// ------------------------------------stage 'Compilar'
+// ------------------------------------
+stage 'Compilar'
 // -- Configura variables
 echo 'Configurando variables'
 def mvnHome = tool 'M3'
@@ -30,7 +31,8 @@ if (currentBuild.result == 'UNSTABLE')
 currentBuild.result = 'FAILURE'
 throw err
 }
-// ------------------------------------// -- ETAPA: Instalar
+// ------------------------------------
+// -- ETAPA: Instalar
 // ------------------------------------
 stage 'Instalar'
 echo 'Instala el paquete generado en el repositorio maven'
